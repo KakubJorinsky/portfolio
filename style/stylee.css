@@ -1,4 +1,310 @@
-.citat{
-    font-style: italic;
-    font-weight: normal;
-}
+:root {
+            /* České královské barvy */
+            --royal-red: #7E0A0A; /* Elegantnější, hlubší rudá */
+            --silver: #E0E0E0;    /* Jasná stříbrná */
+            --gold: #C5A059;      /* Matná zlatá (luxusnější než žlutá) */
+            --dark-bg: #120808;   /* Temný podklad */
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--silver);
+            font-family: 'Libre Baskerville', serif; /* Čitelný text */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            line-height: 1.8;
+            /* Jemná textura na pozadí */
+            background-image: radial-gradient(#2a1010 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* HONOSNÉ NADPISY */
+        h1, h2, h3, .form-title {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-weight: 700;
+            text-transform: uppercase; /* Všechna písmena velká pro efekt */
+            letter-spacing: 2px;       /* Rozestupy mezi písmeny pro čitelnost */
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0px 4px 10px rgba(0,0,0,0.8);
+            line-height: 1.2;
+        }
+        
+        h2 {
+            border-bottom: 2px solid var(--gold);
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        /* Hero Sekce */
+        .hero {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, rgba(126,10,10,0.4) 0%, rgba(18,8,8,0.9) 100%);
+            border-bottom: 3px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+        }
+
+        .portrait-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .profile-img {
+            width: 400px;
+            height: auto;
+            border: 4px solid var(--gold);
+            outline: 2px solid var(--royal-red); /* Dvojitý rámeček */
+            outline-offset: 5px;
+            border-radius: 2px;
+            box-shadow: 0 0 50px rgba(197, 160, 89, 0.3);
+            transition: transform 0.5s ease;
+        }
+
+        /* Místo pro lva */
+        .royal-emblem {
+            position: absolute;
+            bottom: 50px; 
+            right: 50px;  
+            width: 45px;
+            height: auto;
+            filter: drop-shadow(2px 2px 4px black);
+            z-index: 10;
+        }
+
+        .titles {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #bbb;
+            margin-top: 15px;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        /* Sekce */
+        section {
+            padding: 5rem 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: 1.15rem;
+            text-align: justify; /* Zarovnání do bloku */
+            text-align-last: center; /* Poslední řádek na střed */
+            margin-bottom: 1.5rem;
+        }
+
+        blockquote {
+            font-size: 1.3rem;
+            color: var(--gold);
+            font-style: italic;
+            border-left: 3px solid var(--gold);
+            margin: 30px auto;
+            padding: 10px 20px;
+            background: rgba(0,0,0,0.3);
+            max-width: 700px;
+        }
+
+        /* Karty dovedností */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-card {
+            background: linear-gradient(145deg, #1e0d0d, #250f0f);
+            border: 1px solid var(--gold);
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--silver);
+            box-shadow: 0 10px 25px rgba(197, 160, 89, 0.2);
+        }
+        
+        .skill-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--silver);
+        }
+
+        /* Formulář */
+        .form-container {
+            background-color: #F5F5F0; /* Krémově bílá - jako drahý papír */
+            color: #1a1a1a;
+            padding: 40px;
+            border-radius: 2px;
+            border: 8px solid var(--gold);
+            outline: 1px solid #000;
+            outline-offset: -15px; /* Ozdobná linka uvnitř */
+            text-align: left;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .form-container h2 {
+            color: var(--royal-red);
+            border-bottom-color: var(--royal-red);
+            text-align: center;
+            display: block;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            color: var(--royal-red);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            background: #fff;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: var(--royal-red);
+            outline: none;
+            background: #fffaf0;
+        }
+
+        button.seal-btn {
+            display: block;
+            width: 100%;
+            margin-top: 30px;
+            padding: 18px;
+            background-color: var(--royal-red);
+            color: #fff;
+            border: none;
+            border-bottom: 4px solid #500000; /* 3D efekt tlačítka */
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-transform: uppercase;
+        }
+
+        button.seal-btn:hover {
+            background-color: #990000;
+            transform: translateY(2px);
+            border-bottom-width: 2px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 40px;
+            font-size: 0.9rem;
+            background-color: #080303;
+            color: #666;
+            border-top: 1px solid #333;
+        }
+
+        /* Kontejner, který drží lvy a tebe v jedné řadě */
+        .heraldry-container {
+            display: flex;
+            justify-content: center; /* Zarovná vše na střed */
+            align-items: center;    /* Zarovná svisle na střed */
+            gap: 20px;              /* Mezera mezi lvy a tebou */
+            margin-bottom: 20px;
+            flex-wrap: wrap;        /* Aby se to na mobilu nerozbilo */
+        }
+
+        /* Styl pro lvy */
+        .lion-supporter {
+            width: 280px;           /* Velikost lva - uprav dle potřeby */
+            height: auto;
+            filter: drop-shadow(0 5px 5px rgba(0,0,0,0.5)); /* Stín pod lvem */
+        }
+
+        /* Pravého lva otočíme zrcadlově, aby koukal na tebe */
+        .left-lion {
+            transform: scaleX(-1);
+        }
+
+        /* Úprava pro mobil - lvi se trochu zmenší, aby se vešli */
+        @media (max-width: 768px) {
+            .lion-supporter {
+                width: 80px;
+                order: -1; /* Na mobilu můžeme chtít lvy třeba nad fotkou, nebo je nechat vedle */
+            }
+        }  
+        /* Odkazy a Archivy */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            background: rgba(20, 10, 10, 0.6); /* Tmavé průhledné pozadí */
+            border: 1px solid var(--gold);
+            padding: 20px;
+            text-decoration: none; /* Zruší podtržení odkazu */
+            color: var(--silver);
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .link-card:hover {
+            background: var(--royal-red); /* Při najetí zčervená */
+            border-color: #fff;
+            transform: translateX(10px); /* Posune se doprava */
+            box-shadow: -5px 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .link-card .icon {
+            font-size: 2.5rem;
+            margin-right: 20px;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .link-card .text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .link-card .text strong {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .link-card:hover .text strong {
+            color: #fff; /* Zlatá se změní na bílou pro lepší čitelnost na červené */
+        }
+
+        .link-card .text span {
+            font-size: 0.95rem;
+            color: #ccc;
+            font-family: 'Libre Baskerville', serif;
+        }
+        
+        .link-card:hover .text span {
+            color: #e0e0e0;
+        }
