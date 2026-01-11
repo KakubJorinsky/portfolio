@@ -1,49 +1,56 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeho Hraběcí Excelence - Jakub Kořínský</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
-    <script src="/script/script.js" defer></script>
+    <script src="script/script.js" defer></script>
 </head>
 <body>
-
     <header>
         <div class="wrapper">
-            <div class="wrapper-logo">
-            <img src="/img/lev.png" alt="strop">
+            <div class="wrapper-logo" id="logo-container" style="cursor: pointer; position: relative;">
+                <img src="img/hat.svg" id="royal-hat" alt="Císařská čepice" class="hat-hidden">
+                <span class="logo-text" id="logo_inicialy">JK</span>
             </div>
-            <div class="wrapper-hamburger">
+            <div class="wrapper-hamburger" id="hamburger-btn">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-        </div>       
-        <nav>
-            <a href="#o-mnie">O mně</a>
-            <a href="#umeni">Umění a Vědění</a>
-            <a href="#archivy">Královské Archivy & Spojení</a>
-            <a href="#suplika">Suplika pro Hraběcí Excelenci</a>
-        </nav>
+            <nav id="nav-menu">
+                <a href="#o-mnie">O mně</a>
+                <a href="#umeni">Umění a Vědění</a>
+                <a href="#archivy">Královské Archivy</a>
+                <a href="#suplika">Suplika</a>
+            </nav>
+        </div>
     </header>
 
-
     <main>
-        <div class="hero">
-            <div class="heraldry-container">
-                <img src="img/lev.png" alt="Český lev" class="lion-supporter left-lion">
+        <div class="hero parchment-bg">
+            <p class="intro-text">Jeho hraběcí Excelence,</p>
+            
+            <div class="portrait-container">
+                <img src="img/ornament.png" alt="Dekorace" class="ornament left-ornament">
                 
-                <div class="portrait-wrapper">
-                    <img src="img/franz_josef_koren.png" alt="Portrét hraběte" class="profile-img">
+                <div class="frame" id="portrait-frame">
+                    <img src="img/franz_josef_koren.png" alt="Portrét civilní" class="profile-img base-portrait">
+                    
+                    <img src="img/franz_josef_koren_s_cepici.png" alt="Portrét s čepicí" class="profile-img royal-overlay">
                 </div>
 
-                <img src="img/lev.png" alt="Český lev" class="lion-supporter right-lion">
+                <img src="img/ornament.png" alt="Dekorace" class="ornament right-ornament">
             </div>
             
-            <h1>Jeho hraběcí Excelence,<br>Jakub Kořínský z Kokořína</h1>
-            <br>
-            <div class="titles">
+            <h1 class="grand-name">Jakub Kořínský<br>z Kokořína</h1>
+            
+            <div class="titles-scroll">
+                <p>
                 z Boží vůle hrabě kokořínský král uherský a český, lombardský a benátský, dalmatský, chorvatský, slavonský, haličský, vladimiřský a illyrský;<br> 
                 arcivévoda rakouský, velkovévoda toskánský a krakovský;<br> 
                 vévoda lotrinský, salcburský, štyrský, korutanský, kraňský a bukovinský;<br> 
@@ -55,96 +62,124 @@
                 hrabě hohenembský, feldkirchský, břežnický, sonnenberský;<br> 
                 pán terstský, kotorský a na slovinském krajišti;<br> 
                 velkovévoda srbský et cetera.<br><br><br>
-                <small>L.P. 2026, Kokořín (hl. město říše), Hrabství Kokořínské</small>
+                </p>
+                <small class="location">Léta Páně 2026, Kokořín (hl. město říše)</small>
             </div>
-        </div>
-        <section id="o-mnie">
-            <h2>O Urozené Osobnosti Mé</h2>
-            <p>
-            Narodil jsem se pravděpodobně omylem do nesprávného století. Zatímco má duše prahne po aristokratickém typu života a řešení diferenciálních rovnic u krbu, 
-            osud mě uvrhl do <strong>SOU Elektrotechnického</strong>, kde jsem nucen zabývat se tak přizemními věcmi, jako je tok elektronů v drátech.
-            </p>
-            <p>Rád bych se stal učitelem matematiky a geografie, abych mohl budoucí generace týrat u tabule stejně stoicky, jako tady týrají mne.<br>*mrk* *mrk* Zábrodský</p>
-        </section>
-
-        <section id="umeni">
-            <h2>Umění a Vědění</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Vysoké Počtářství</h3>
-                    <p>(Matematika) Chci jít na FAVku, protože mě baví trápit se nad rovnicemi, které nikdo nikdy nepoužije. Je to masochismus, ale aspoň u toho nemusím nosit montérky.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Imperiální Výboje</h3>
-                    <p>(Geografie) Neznám země, znám jen budoucí provincie. Má orientace je skvělá – vždy vím, kterým směrem je hrad Kokořín a kde leží nejbližší kořist.</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Písmo Strojové</h3>
-                    <p>(IT) Když ten krám nefunguje, pošlu ho do vyhnanství. HTML píšu s odporem šlechtice, který musí sáhnout na lopatu. Kód nekompiluji, kód popravuji.</p>
-                </div>
-                <div class="skill-card">
-                <h3>Dějeprava</h3>
-                <p>(Historie) Většinu světových válek považuji za zbytečné administrativní chyby, kterým se dalo předejít, kdybych tam byl. Učím se nazpaměť pouze vítězství; prohry mých předků považuji za taktický ústup do předem připravených pozic.</p>
-                </div>
-            </div>
-        </section>
-        <section id="archivy">
-            <h2>Královské Archivy & Spojení</h2>
-            <p>
-                Pro ty, kteří chtějí nahlédnout do mých digitálních podzemí nebo se mnou navázat diplomatické styky na mezinárodní úrovni.
-            </p>
-
-            <div class="links-container">
-                <a href="https://github.com/KakubJorinsky" target="_blank" class="link-card">
-                    <div class="icon">📜</div>
-                    <div class="text">
-                        <strong>GitHub (Královský Depozitář)</strong>
-                        <span>Zde skladuji skripty, které jsem byl donucen napsat pod hrozbou propadnutí. Vstup na vlastní nebezpečí.</span>
-                    </div>
-                </a>
-
-                <a href="#" target="_blank" class="link-card">
-                    <div class="icon">🤝</div>
-                    <div class="text">
-                        <strong>LinkedIn (Dvorní Rejstřík)</strong>
-                        <span>Máte-li pro mne uvolněný trůn, katedru matematiky nebo jinou honosnou sinekuru, spojte se se mnou zde.</span>
-                    </div>
-                </a>
-
-                <a href="https://www.instagram.com/hrabe_kokorinsky/" target="_blank" class="link-card">
-                    <div class="icon">🖼️</div>
-                    <div class="text">
-                        <strong>Instagram (Obrazárna)</strong>
-                        <span>Výjevy z mého života.</span>
-                    </div>
-                </a>
-            </div>
-        </section>
-        <section id="suplika">
-            <h2>Suplika pro Hraběcí Excelenci</h2>
-            <p>Máte-li pro mne dotaz hodný mého intelektu, využijte tento pergamen. Holub bude připraven k odletu okamžitě.</p>
             
-            <div class="form-container">
-                <form id="royalForm">
-                    <label for="jmeno">Vaše Urozené Jméno:</label>
-                    <input type="text" id="jmeno" name="jmeno" placeholder="Např. Jan Lucemburský..." required>
+            <div class="fade-bottom"></div>
+        </div>
 
-                    <label for="predmet">Důvod Supliky:</label>
-                    <input type="text" id="predmet" name="predmet" placeholder="Např. Žádost o audienci..." required>
+        <div class="content-wrapper">
+            <section id="o-mnie">
+                <h2>O Urozené Osobnosti Mé</h2>
+                <div class="text-block">
+                    <p>
+                        Tato část mého portfolia slouží k formálnímu představení mé osoby, shrnutí mých dosavadních studijních úspěchů na SOU elektrotechnickém a nastínění mých profesních vizí do budoucna.
+                        Nicméně, bylo by od mé maličkosti – či spíše Veličenstva – blaholibé a nanejvýš nezodpovědné, kdybych zde uvedl prostá a přízemní fakta, která by mohla být zneužitelná izraelskou špionáží či, nedej Bože, školní inspekcí. 
+                        Tento text tedy slouží primárně jako sofistikovaná literární výplň, jež má za úkol vizuálně uspokojit oko pedagoga lačnícího po odstavcích, aniž by však došlo k vyzrazení státního tajemství, kterým má pravá identita bezpochyby je.
+                    </p>
+                    <p>
+                        Jíž slovutný vynálezce a neuznaný pedagog Jára Cimrman ve své ztracené disertační práci <em>"Vliv délky textu na známku z výpočetní techniky"</em> (Vídeň, 1912) postuloval, že pokud student zahltí hodnotitele dostatečným množstvím archaických větných konstrukcí a nicneříkajících souvětí, mozek kantorův upadne do stavu tzv. "milosrdné letargie". 
+                        V tomto stavu je pak učitel náchylný udělit zápočet jen proto, aby unikl z bludiště mých myšlenek. 
+                        Tento princip jsem si osvojil a s úspěchem aplikoval během mého studia, což mi umožnilo dosáhnout vynikajících výsledků bez nutnosti odhalovat podstatu mého intelektuálního génia.
+                    </p>
+                    <p>
+                        Závěrem bych rád podotkl, že psaní o sobě samém považuji za akt nejvyššího plebejského narcismu, který se k mému titulu nehodí. 
+                        Proto tento prostor využívám spíše k tomu, abych demonstroval svou schopnost generovat text, který vypadá moudře, zabírá místo na monitoru a splňuje zadání "napiš něco o sobě", ačkoliv o mně neříká zhola nic, kromě toho, že mám zřejmě příliš mnoho volného času a zálibu v dlouhých slovech.
+                    </p>
+                </div>
+            </section>
 
-                    <label for="zprava">Sdělení:</label>
-                    <textarea id="zprava" name="zprava" rows="5" placeholder="Sem vepište svá slova..." required></textarea>
+            <section id="umeni">
+                <h2>Umění a Vědění</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="card-header">Vysoké Počtářství</div>
+                        <div class="card-sub">Matematika</div>
+                        <p>Hlaváček: <i>„Já bych tak chtěl mít ty vaše dedukční schopnosti, pane inspektore!“</i><br>Trachta: <i>„To se nedá naučit, Hlaváčku. S tím se musí člověk narodit.“</i></p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="card-header">Imperiální Výboje</div>
+                        <div class="card-sub">Geografie</div>
+                        <p><i>„Jdu na sever... a už jdu na jih!“</i></p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="card-header">Písmo Strojové</div>
+                        <div class="card-sub">IT &amp; Web</div>
+                        <p>HTML píšu s odporem šlechtice, který musí sáhnout na lopatu.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="card-header">Dějeprava</div>
+                        <div class="card-sub">Historie</div>
+                        <p><i>„Dobrý den, ehhh... já jsem Smyl Flek z Nohavic.“</i></p>
+                    </div>
+                </div>
+            </section>
 
-                    <button type="submit" onclick="odeslatHoluba()" class="seal-btn">⚜️ Zapečetit a Odeslat Holuba ⚜️</button>
-                </form>
-            </div>
-        </section>
+            <section id="archivy">
+                <h2>Hraběcí kontakt</h2>
+                <div class="links-container">
+                    <a href="https://github.com/KakubJorinsky" target="_blank" class="link-card">
+                        <span class="icon">📜</span>
+                        <div class="link-info">
+                            <strong>GitHub</strong>
+                            <span>Královský Depozitář Kódů</span>
+                        </div>
+                        <span class="arrow">→</span>
+                    </a>
+
+                    <a href="#" target="_blank" class="link-card">
+                        <span class="icon">🤝</span>
+                        <div class="link-info">
+                            <strong>LinkedIn</strong>
+                            <span>Dvorní Rejstřík</span>
+                        </div>
+                        <span class="arrow">→</span>
+                    </a>
+
+                    <a href="https://www.instagram.com/hrabe_kokorinsky/" target="_blank" class="link-card">
+                        <span class="icon">🖼️</span>
+                        <div class="link-info">
+                            <strong>Instagram</strong>
+                            <span>Obrazárna</span>
+                        </div>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </section>
+
+            <section id="suplika">
+                <h2>Suplika pro Excelenci</h2>
+                <div class="form-container">
+                    <form id="royalForm">
+                        <div class="input-group">
+                            <input type="text" id="jmeno" required placeholder=" ">
+                            <label for="jmeno">Vaše Urozené Jméno</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" id="predmet" required placeholder=" ">
+                            <label for="predmet">Důvod Supliky</label>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea id="zprava" rows="4" required placeholder=" "></textarea>
+                            <label for="zprava">Sdělení</label>
+                        </div>
+
+                        <button type="button" onclick="odeslatHoluba()" class="seal-btn">
+                            Odeslat Holuba
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </div>
     </main>
-    
 
     <footer>
-        Vyhotoveno MMXXVI. léta Páně pro potřeby maturity na SOU Elektrotechnickém.<br>
-        Všechna práva vyhrazena Koruně České a Jeho Hraběcí Excelenci z Kokořína.
+        <p>Vyhotoveno léta Páně MMXXVI pro potřeby maturity na SOU Elektrotechnickém.<br>
+        Všechna práva vyhrazena Koruně České a Jeho Hraběcí Excelenci z Kokořína.</p>
+        <img src="img/monogram_korinsky.svg" class="footer-seal" alt="Monogram JK">
     </footer>
 
 </body>
